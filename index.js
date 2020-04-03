@@ -1,9 +1,9 @@
-var start = document.getElementById("start");
-var stop = document.getElementById("stop");
-var step = document.getElementById("step");
-console.log(start);
-console.log(stop);
-console.log(step);
+var startVal = document.getElementById("start1").value;
+var stopVal = document.getElementById("stop").value;
+var stepVal = document.getElementById("step").value;
+console.log(startVal);
+console.log(stopVal);
+console.log(stepVal);
 
 function initial(m, k){
   m = [1,2,3,4,5,6,7,8,9,0];
@@ -31,15 +31,12 @@ function union(arr){
 
 function range(a, b, c){
   let result = [];
-  if(b == null){
-    for (var i = 0; i < a; i+=c) {
+  // console.log(a,b,c);
+  var k = 0;
+    for (let i = a; i < b; i+=c) {
       result.push(i);
+      k++;
     }
-  }
-  else {
-    for (var i = a; i < b; i+=c) {
-      result.push(i);
-    }
-  }
+    console.log(k);
   return result;
 }

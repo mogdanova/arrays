@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="index.js"></script>
   <style>
     input{
       width: 70px;
@@ -17,13 +16,14 @@
 </head>
 <body>
   <main>
-    <input type="number" id="start" onchange="startVal = this.value" value="8">
-    <input type="number" id="stop" onchange="stoptVal = this.value"  value="0">
-    <input type="number" id="step"  onchange="stepVal = this.value" value="3"><br>
+    <input type="text" id="start1" value="1">
+    <input type="text" id="stop" value="10">
+    <input type="text" id="step" value="3"><br>
     <button onclick="console.log(initial());">initial</button>
     <button onclick="console.log(compact());">compact</button>
     <button onclick="console.log(union());">union</button>
-    <button onclick="console.log(range(startVal, stopVal, stepVal));//console.log(start);console.log(stop);console.log(step);">range</button><br>
+    <button onclick="console.log(range(startVal, stopVal, stepVal));">range</button><br>
   </main>
+  <script src="index.js"></script>
 </body>
 </html>
