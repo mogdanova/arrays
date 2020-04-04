@@ -29,14 +29,17 @@ function union(arr){
   return result;  
 }
 
-function range(a, b, c){
+function range(a, b, c) {
   let result = [];
-  // console.log(a,b,c);
-  var k = 0;
-    for (let i = a; i < b; i+=c) {
+  if((b != 0) || (b != '') || (b != "") || (b != null)) {
+    for(var i = a; i < b; i+=c){
       result.push(i);
-      k++;
     }
-    console.log(k);
+  }
+  else {
+    for(var i = 0; i < a; i+=c){
+      result.push(i);
+    }
+  }
   return result;
 }
