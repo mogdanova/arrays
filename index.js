@@ -1,10 +1,3 @@
-var startVal = document.getElementById("start1").value;
-var stopVal = document.getElementById("stop").value;
-var stepVal = document.getElementById("step").value;
-console.log(startVal);
-console.log(stopVal);
-console.log(stepVal);
-
 function initial(m, k){
   m = [1,2,3,4,5,6,7,8,9,0];
   k = 4;
@@ -29,17 +22,27 @@ function union(arr){
   return result;  
 }
 
-function range(a, b, c) {
-  let result = [];
-  if((b != 0) || (b != '') || (b != "") || (b != null)) {
-    for(var i = a; i < b; i+=c){
-      result.push(i);
+function range(){
+  console.log(sumInRange( 10 ));
+  console.log(sumInRange( 1, 11 ));
+  console.log(sumInRange( 1, 10, 3 ));
+  console.log(sumInRange( 8, null, 3 ));
+  console.log(sumInRange( 8, null ));
+  console.log(sumInRange( -2, -5 ));
+  console.log(sumInRange( -5, -2 ));
+  console.log(sumInRange( -5, -2, 2 ));
+}
+
+function sumInRange(start, end, step) {
+  let arr = [];
+  if(step == undefined) step = 1;
+  if(end == null || end == undefined){
+    for(var i = 0; i < start; i += step){
+      arr.push(i);
     }
   }
-  else {
-    for(var i = 0; i < a; i+=c){
-      result.push(i);
-    }
+  for(let i = start; i < end; i += step){
+    arr.push(i);
   }
-  return result;
+  return arr;
 }
